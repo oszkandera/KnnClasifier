@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KnnClasifier", "KnnClasifier\KnnClasifier.csproj", "{5C0DD131-603C-443F-83DF-7816DFAAAE11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{1008CAAF-CC8D-4A06-BFDB-FBAE52DF3906}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C0DD131-603C-443F-83DF-7816DFAAAE11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C0DD131-603C-443F-83DF-7816DFAAAE11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C0DD131-603C-443F-83DF-7816DFAAAE11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C0DD131-603C-443F-83DF-7816DFAAAE11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1008CAAF-CC8D-4A06-BFDB-FBAE52DF3906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1008CAAF-CC8D-4A06-BFDB-FBAE52DF3906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1008CAAF-CC8D-4A06-BFDB-FBAE52DF3906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1008CAAF-CC8D-4A06-BFDB-FBAE52DF3906}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EF1BF65-CEC4-402F-AD1A-EE619F78665B}
+	EndGlobalSection
+EndGlobal
