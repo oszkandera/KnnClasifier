@@ -9,4 +9,8 @@
     <ProjectReference Include="..\KnnClasifier\KnnClasifier.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
 </Project>

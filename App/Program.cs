@@ -8,7 +8,7 @@ namespace App
     {
         static void Main(string[] args)
         {
-            var filePath = @"C:\Users\szkan\Desktop\VSB\ING\2. ročník\1.semestr\MAD3\Datasets\iris.data";
+            var filePath = @"..\..\..\Data\iris.data";
 
             var dataLoader = new CsvDataLoader();
             var data = dataLoader.LoadData(filePath);
@@ -19,15 +19,16 @@ namespace App
 
             var clasifier = new KnnClasifier.KnnClasifier(trainingData, trainingClasses);
 
-            var classification = clasifier.Clasify(new double[] { 5.4, 3.0, 4.5, 1.5 }, 5);
+            var unknownInstance = new double[] { 5.4, 3.0, 4.5, 1.5 };
+            var k = 5;
 
-
+            var classification = clasifier.Clasify(unknownInstance, k);
         }
 
-        private static List<List<String>> ExtractTrainingData(List<List<string>> data, double requiredTrainingDataSize)
+        private static List<List<string>> ExtractTrainingData(List<List<string>> data, double requiredTrainingDataSize)
         {
             var random = new Random();
-            
+
             var registeredInstances = new HashSet<int>() { -1 };
 
             var trainingData = new List<List<string>>();
@@ -39,7 +40,7 @@ namespace App
                 {
                     instanceId = random.Next(0, data.Count - 1);
                 }
-                
+
                 trainingData.Add(data[instanceId]);
             }
 
@@ -60,7 +61,7 @@ namespace App
 
                 for (int attribute = 0; attribute < numberOfValueAttributes; attribute++)
                 {
-                    valueData[instance][attribute] = Double.Parse(data[instance][attribute], CultureInfo.InvariantCulture);
+                    valueData[instance][attribute] = double.Parse(data[instance][attribute], CultureInfo.InvariantCulture);
                 }
             }
 

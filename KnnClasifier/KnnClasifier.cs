@@ -12,7 +12,7 @@ namespace KnnClasifier
         private readonly string[] _trainingClasses;
 
         private int NumberOfTrainingInstances => _trainingData.Length;
-        
+
         private readonly IDistanceCalculator _distanceCalculator;
 
         public KnnClasifier(double[][] trainingData, string[] trainingClasses)
@@ -22,8 +22,8 @@ namespace KnnClasifier
             _distanceCalculator = new EuclidDistanceCalculator();
         }
 
-        public KnnClasifier(double[][] trainingData, string[] trainingClasses, IDistanceCalculator distanceCalculator) 
-            : this ( trainingData, trainingClasses )
+        public KnnClasifier(double[][] trainingData, string[] trainingClasses, IDistanceCalculator distanceCalculator)
+            : this(trainingData, trainingClasses)
         {
             _distanceCalculator = distanceCalculator;
         }
@@ -42,8 +42,8 @@ namespace KnnClasifier
             }
 
             var kNearestInstanceIds = distances.OrderBy(x => x.Distance)
-                                             .Take(k)
-                                             .Select(x => x.Id);
+                                               .Take(k)
+                                               .Select(x => x.Id);
 
 
             var relevantClass = GetRelevantClass(kNearestInstanceIds);
@@ -54,7 +54,7 @@ namespace KnnClasifier
         private string GetRelevantClass(IEnumerable<int> kNearestInstanceIds)
         {
             var classes = new Dictionary<string, int>();
-            foreach(var id in kNearestInstanceIds)
+            foreach (var id in kNearestInstanceIds)
             {
                 var instanceClass = _trainingClasses[id];
                 if (!classes.ContainsKey(instanceClass))
